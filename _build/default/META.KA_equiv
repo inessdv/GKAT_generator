@@ -1,0 +1,6 @@
+description = ""
+requires = "fmt hashcons mlbdd unionFind z3"
+archive(byte) = "KA_equiv.cma"
+archive(native) = "KA_equiv.cmxa"
+plugin(byte) = "KA_equiv.cma"
+plugin(native) = "KA_equiv.cmxs"

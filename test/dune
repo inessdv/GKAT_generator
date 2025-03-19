@@ -1,0 +1,3 @@
+(test
+ (name KA_equiv_test)
+ (libraries KA_equiv ounit2 qcheck))
