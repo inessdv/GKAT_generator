@@ -54,9 +54,17 @@ def execute(args):
 def generate_eq(benchmark):
     """input should be in this format = e2000b20p200"""
 
+    directory = benchmark+"eq"
     # Get the current directory of the script
-    current_dir = os.path.dirname(__file__)
+    current_dir = os.getcwd()
+    path = os.path.join(current_dir, directory)
 
+    #if directory does not exist yet, create
+    if not (os.path.exists(path)):
+        os.mkdir(path)
+        print("Directory '%s' created" %directory)
+
+    #split the string to get params
     exp_size, rest  = benchmark.split("b")
     exp_size = int(exp_size[1:])
     bexp, pbool  = rest.split("p")
@@ -88,8 +96,11 @@ def generate_eq(benchmark):
     ]
 
     execute(args)
+    
+    #get infp
+    syntax_check.process_bench(benchmark)
 
-    return syntax_check.process_bench(benchmark)
+    return
 
     """# Read and check the generated expressions
     try:
