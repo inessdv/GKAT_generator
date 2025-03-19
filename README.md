@@ -1,1 +1,1 @@
-# GKAT equiv expression generator with OCAM
+# GKAT equiv expression generator with OCAML
