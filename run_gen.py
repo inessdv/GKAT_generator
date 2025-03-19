@@ -1,6 +1,7 @@
 import bin.syntax_check as syntax_check
 import subprocess
 import os
+import sys
 
 """
 Run Ocaml project to generate benchmar expressions
@@ -50,25 +51,29 @@ def execute(args):
         return None
 
 
-def main():
+def generate_eq(benchmark):
     """input should be in this format = e2000b20p200"""
-
-    benchmark = "e3000b30p200" #input("Enter benchamrk in eXXXbYYYpZZZ format:")
 
     # Get the current directory of the script
     current_dir = os.path.dirname(__file__)
-    
+
+    exp_size, rest  = benchmark.split("b")
+    exp_size = int(exp_size[1:])
+    bexp, pbool  = rest.split("p")
+    bexp = int(bexp)
+    pbool = int(pbool)
+
     # Construct the directpry benchmark path
-    bench_directory_path = os.path.join(current_dir, benchmark + "eq")
+    #bench_directory_path = os.path.join(current_dir, benchmark + "eq")
 
     # Path to save the generated expressions
-    output_file_path = bench_directory_path
+    #output_file_path = bench_directory_path
 
     build_ocaml_program()
 
-    exp_max_size = 6000
-    bexp_max_size = 30
-    max_p_bool_count = 200
+    exp_max_size = exp_size*2
+    bexp_max_size = bexp
+    max_p_bool_count = pbool
     bench_count_eq = 50
     counter_equal = 0 #starting point file
     path = "../" + benchmark
@@ -104,4 +109,5 @@ def main():
         """
 
 if __name__ == "__main__":
-    main()
+    benchmark = sys.argv[1]
+    generate_eq(benchmark)

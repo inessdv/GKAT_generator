@@ -1,8 +1,8 @@
-# dune exec bench 6000 30 200 50 0 ../e3000b30p200
+# dune exec bench 4000 20 200 50 0 ../e2000b20p200
 # OCAMLPARAM: unset
 # Shared cache: enabled-except-user-rules
 # Shared cache location: /Users/inessantacruz/.cache/dune/db
-# Workspace root: /Users/inessantacruz/Desktop/myKAT
+# Workspace root: /Users/inessantacruz/Desktop/GKAT_generator
 # Auto-detected concurrency: 11
 # Dune context:
 #  { name = "default"
@@ -13,4 +13,4 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /Users/inessantacruz/.opam/cs3110-2024sp/bin/ocamlc.opt -config > /var/folders/t6/b63h21p57q3c8v9rgqq6c0440000gn/T/dune_e89ec1_output
+$ /Users/inessantacruz/.opam/cs3110-2024sp/bin/ocamlc.opt -config > /var/folders/t6/b63h21p57q3c8v9rgqq6c0440000gn/T/dune_e43c28_output
