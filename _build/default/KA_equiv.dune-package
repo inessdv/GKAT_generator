@@ -1,70 +1,18 @@
-(lang dune 3.17)
+(lang dune 3.15)
 (name KA_equiv)
 (sections (lib .) (libexec .) (bin ../../bin) (doc ../../doc/KA_equiv))
 (files
  (lib
-  (Common.ml
-   GKAT_2.ml
-   GKAT_Aut.ml
-   GKAT_Symb_BDD.ml
-   GKAT_Symb_Z3.ml
-   GKAT_Symb_Z3BDD.ml
-   KA.ml
-   KA2.ml
-   KAT_Set.ml
-   KA_Set.ml
-   KA_equiv.a
+  (KA_equiv.a
    KA_equiv.cma
    KA_equiv.cmxa
    META
-   PointedCoprod.ml
    dune-package
-   equiv.ml
    kA_equiv.cmi
    kA_equiv.cmt
    kA_equiv.cmx
    kA_equiv.ml
-   kA_equiv__Common.cmi
-   kA_equiv__Common.cmt
-   kA_equiv__Common.cmx
-   kA_equiv__Equiv.cmi
-   kA_equiv__Equiv.cmt
-   kA_equiv__Equiv.cmx
-   kA_equiv__GKAT_2.cmi
-   kA_equiv__GKAT_2.cmt
-   kA_equiv__GKAT_2.cmx
-   kA_equiv__GKAT_Aut.cmi
-   kA_equiv__GKAT_Aut.cmt
-   kA_equiv__GKAT_Aut.cmx
-   kA_equiv__GKAT_Symb_BDD.cmi
-   kA_equiv__GKAT_Symb_BDD.cmt
-   kA_equiv__GKAT_Symb_BDD.cmx
-   kA_equiv__GKAT_Symb_Z3.cmi
-   kA_equiv__GKAT_Symb_Z3.cmt
-   kA_equiv__GKAT_Symb_Z3.cmx
-   kA_equiv__GKAT_Symb_Z3BDD.cmi
-   kA_equiv__GKAT_Symb_Z3BDD.cmt
-   kA_equiv__GKAT_Symb_Z3BDD.cmx
-   kA_equiv__KA.cmi
-   kA_equiv__KA.cmt
-   kA_equiv__KA.cmx
-   kA_equiv__KA2.cmi
-   kA_equiv__KA2.cmt
-   kA_equiv__KA2.cmx
-   kA_equiv__KAT_Set.cmi
-   kA_equiv__KAT_Set.cmt
-   kA_equiv__KAT_Set.cmx
-   kA_equiv__KA_Set.cmi
-   kA_equiv__KA_Set.cmt
-   kA_equiv__KA_Set.cmx
-   kA_equiv__Parser.cmi
-   kA_equiv__Parser.cmt
-   kA_equiv__Parser.cmx
-   kA_equiv__PointedCoprod.cmi
-   kA_equiv__PointedCoprod.cmt
-   kA_equiv__PointedCoprod.cmx
-   opam
-   parser.ml))
+   opam))
  (libexec (KA_equiv.cmxs))
  (bin (bench))
  (doc (README.md)))
@@ -85,58 +33,5 @@
      (visibility public)
      (kind alias)
      (source (path KA_equiv) (impl (path kA_equiv.ml-gen))))
-    (name KA_equiv)
-    (modules
-     (module
-      (obj_name kA_equiv__Common)
-      (visibility public)
-      (source (path Common) (impl (path Common.ml))))
-     (module
-      (obj_name kA_equiv__Equiv)
-      (visibility public)
-      (source (path Equiv) (impl (path equiv.ml))))
-     (module
-      (obj_name kA_equiv__GKAT_2)
-      (visibility public)
-      (source (path GKAT_2) (impl (path GKAT_2.ml))))
-     (module
-      (obj_name kA_equiv__GKAT_Aut)
-      (visibility public)
-      (source (path GKAT_Aut) (impl (path GKAT_Aut.ml))))
-     (module
-      (obj_name kA_equiv__GKAT_Symb_BDD)
-      (visibility public)
-      (source (path GKAT_Symb_BDD) (impl (path GKAT_Symb_BDD.ml))))
-     (module
-      (obj_name kA_equiv__GKAT_Symb_Z3)
-      (visibility public)
-      (source (path GKAT_Symb_Z3) (impl (path GKAT_Symb_Z3.ml))))
-     (module
-      (obj_name kA_equiv__GKAT_Symb_Z3BDD)
-      (visibility public)
-      (source (path GKAT_Symb_Z3BDD) (impl (path GKAT_Symb_Z3BDD.ml))))
-     (module
-      (obj_name kA_equiv__KA)
-      (visibility public)
-      (source (path KA) (impl (path KA.ml))))
-     (module
-      (obj_name kA_equiv__KA2)
-      (visibility public)
-      (source (path KA2) (impl (path KA2.ml))))
-     (module
-      (obj_name kA_equiv__KAT_Set)
-      (visibility public)
-      (source (path KAT_Set) (impl (path KAT_Set.ml))))
-     (module
-      (obj_name kA_equiv__KA_Set)
-      (visibility public)
-      (source (path KA_Set) (impl (path KA_Set.ml))))
-     (module
-      (obj_name kA_equiv__Parser)
-      (visibility public)
-      (source (path Parser) (impl (path parser.ml))))
-     (module
-      (obj_name kA_equiv__PointedCoprod)
-      (visibility public)
-      (source (path PointedCoprod) (impl (path PointedCoprod.ml))))))
+    (name KA_equiv))
    (wrapped true))))

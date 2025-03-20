@@ -1,4 +1,4 @@
 (executable
  (public_name bench)
  (name main)
- (libraries KA_equiv qcheck))
+ (libraries qcheck fmt hashcons z3))
